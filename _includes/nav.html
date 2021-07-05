@@ -83,6 +83,9 @@
                     {% if site.hackernews %}<li>
                         <a href="https://news.ycombinator.com/user?id={{ site.hackernews }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-hacker-news"></i> Hacker News</a>
                     </li>{% endif %}
+                    {% if site.boj %}<li>
+                        <a href="https://www.acmicpc.net/user/{{ site.boj }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-boj"></i> BOJ</a>
+                    </li>{% endif %}
 				</ul><!-- /.dl-submenu -->
 			</li>
 			<li>
@@ -93,12 +96,12 @@
 				</ul>
 			</li>
 			{% for link in site.data.navigation %}
-		    {% if link.url contains 'http' %}
-		        {% assign domain = '' %}
-		        {% else %}
-		        {% assign domain = site.url %}
-		    {% endif %}
-		    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.title }}</a></li>
-		  {% endfor %}
+                {% if link.url contains 'http' %}
+                    {% assign domain = '' %}
+                {% else %}
+                    {% assign domain = site.url %}
+                {% endif %}
+                <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.title }}</a></li>
+            {% endfor %}
 		</ul><!-- /.dl-menu -->
 	</nav><!-- /.dl-menuwrapper -->
