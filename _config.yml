@@ -3,11 +3,12 @@ title:              sbrus1213
 bio:                'sbrus1213 blog'
 description:        "sbrus1213 blog"
 reading_time:       true
-words_per_minute:   200
+words_per_minute:   30
 logo:               'assets/img/logo.png'
-background:         'assets/img/welcome.png'
+background:         'assets/img/cloud.png'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             ko_KR
+# url:                http://localhost:4000
 url:                https://sbrus1213.github.io
 
 # Jekyll
